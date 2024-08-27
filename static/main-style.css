@@ -21993,7 +21993,7 @@ input[type=number] {
 }
 
 .blog-section .single-blog:hover .blog-img::before {
-    content: "30 Jun 2023";
+    content: "30 Jun 2024";
     color: white;
     font-size: 14px;
     font-weight: 700;
@@ -22037,7 +22037,7 @@ input[type=number] {
 }
 
 .blog-section .single-blog .blog-img::before {
-    content: "30 Jun 2023";
+    content: "30 Jun 2024";
     color: var(--primary-title);
     font-size: 14px;
     font-weight: 700;
@@ -23834,7 +23834,7 @@ input[type=number] {
 }
 
 .our-event-three .slick-slide .brush-bg::before {
-    content: "30 Jun 2023";
+    content: "30 Jun 2024";
     color: var(--primary-title);
     font-size: 14px;
     font-weight: 700;
@@ -24037,7 +24037,7 @@ input[type=number] {
 }
 
 .blog-section-three .single-blog:hover .blog-img .brush-bg::before {
-    content: "30 Jun 2023";
+    content: "30 Jun 2024";
     color: var(--primary);
 }
 
@@ -24052,7 +24052,7 @@ input[type=number] {
 }
 
 .blog-section-three .single-blog .blog-img .brush-bg::before {
-    content: "30 Jun 2023";
+    content: "30 Jun 2024";
     color: var(--primary-title);
     font-size: 14px;
     font-weight: 700;
@@ -24827,7 +24827,7 @@ input[type=number] {
 }
 
 .single-blog .blog-img .brush-bg::before {
-    content: "30 jun 2023";
+    content: "30 jun 2024";
     color: var(--white);
     font-size: 14px;
     font-weight: 700;
