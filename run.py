@@ -19,6 +19,7 @@ def charity_dashboard():
 def post_needs():
     return render_template('post_needs.html')
 
+
 @app.route('/share_story')
 def share_story():
     return render_template('share_story.html')
