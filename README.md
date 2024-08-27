@@ -27,13 +27,13 @@ Follow these steps to get Harvest of Hope up and running on your local machine.
 
 4. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 
 5. **Run the application**
    ```bash
-   python run.py
+   python3 run.py
    ```
 
 6. **Open your browser and go to** `http://localhost:5000`
