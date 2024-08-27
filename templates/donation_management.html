@@ -1,0 +1,21 @@
+<!-- templates/donation_management.html -->
+{% extends "base.html" %}
+{% block title %}Donation Management{% endblock %}
+{% block content %}
+<h1>Manage Donations</h1>
+<table id="donations-table">
+    <thead>
+        <tr>
+            <th>Donor</th>
+            <th>Donation Type</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Donation rows will be dynamically added here -->
+    </tbody>
+</table>
+{% endblock %}

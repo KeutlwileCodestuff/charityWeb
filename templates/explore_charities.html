@@ -1,0 +1,25 @@
+<!-- templates/explore_charities.html -->
+{% extends "base.html" %}
+{% block title %}Explore Charities{% endblock %}
+{% block content %}
+<h1>Explore Charities</h1>
+<div class="filter-section">
+    <input type="text" id="search" placeholder="Search charities...">
+    <select id="cause-filter">
+        <option value="">All Causes</option>
+        <option value="food">Food</option>
+        <option value="education">Education</option>
+        <option value="health">Health</option>
+    </select>
+</div>
+<div class="charities-grid">
+    {% for charity in charities %}
+    <div class="charity-card">
+        <img src="{{ charity.logo }}" alt="{{ charity.name }} Logo">
+        <h3>{{ charity.name }}</h3>
+        <p>{{ charity.description[:100] }}...</p>
+        <a href="{{ url_for('view_charity', charity_id=charity.id) }}" class="btn">View Details</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

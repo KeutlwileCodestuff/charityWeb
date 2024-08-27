@@ -1,0 +1,17 @@
+<!-- templates/feed.html -->
+{% extends "base.html" %}
+{% block title %}Feed{% endblock %}
+{% block content %}
+<h1>Community Feed</h1>
+<a href="{{ url_for('add_post') }}" class="btn">Add New Post</a>
+<div class="feed-container">
+    {% for post in feed %}
+    <div class="feed-item">
+        {% if post.image %}
+        <img src="{{ post.image }}" alt="Post image" class="feed-image">
+        {% endif %}
+        <p class="feed-text">{{ post.text }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
