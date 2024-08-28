@@ -36,6 +36,10 @@ def explore_charities():
 def login():
     return render_template('login.html')
 
+@app.route('/apply')
+def apply():
+    return render_template('apply.html')
+
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
@@ -73,6 +77,7 @@ def load_feed():
 def save_feed(feed):
     with open('feed.json', 'w') as f:
         json.dump(feed, f)
+        
 
 @app.route('/feed')
 def feed():
@@ -94,4 +99,4 @@ def add_post():
     return render_template('add_post.html')
 
 if __name__ == '__main__':
-    app.run(host="192.168.8.113", port=5000, debug=True)
+    app.run(debug=True)
