@@ -59,7 +59,7 @@
                                                     <li class="single-list">
                                                         <a href="javascript:void(0)" class="single">Login<i class="ri-arrow-right-s-line"></i></a>
                                                         <ul class="submenu">
-                                                            <li class="single-list"><a href="login.html" class="single">Login</a></li>
+                                                            <li class="single-list"><a href="{{ url_for('login') }}" class="single">Login</a></li>
                                                             <li class="single-list"><a href="register.html" class="single">Registration</a></li>
                                                             <li class="single-list"><a href="forgot-pass.html" class="single">Forgot Password</a></li>
                                                             <li class="single-list"><a href="verification.html" class="single">Verification</a></li>
@@ -88,9 +88,9 @@
                                     <div class="cart">
                                         <!-- search button -->
                                         <a href="javascript:void(0)" class="rounded-btn search-bar"><i class="ri-search-line"></i></a>
-                                        <a href="'login.html" class="btn-primary-fill pill-btn">Log in</a>
+                                        <a href="{{ url_for('login') }}" class="btn-primary-fill pill-btn">Log in</a>
                                         <!-- Sign Up Button -->
-                                        <a href="register.html" class="btn-primary-fill pill-btn" style="margin-left: 10px;">Sign Up</a>
+                                        <a href="{{ url_for('signup') }}" class="btn-primary-fill pill-btn" style="margin-left: 10px;">Sign Up</a>
                                     </div>
                                 </div>
                             </div>

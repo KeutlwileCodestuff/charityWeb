@@ -32,6 +32,14 @@ def donation_management():
 def explore_charities():
     return render_template('explore_charities.html', charities=charities)
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 @app.route('/view_charity/<int:charity_id>')
 def view_charity(charity_id):
     charity = next((c for c in charities if c['id'] == charity_id), None)
