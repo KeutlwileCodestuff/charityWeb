@@ -40,6 +40,10 @@ def login():
 def signup():
     return render_template('signup.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/view_charity/<int:charity_id>')
 def view_charity(charity_id):
     charity = next((c for c in charities if c['id'] == charity_id), None)
