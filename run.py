@@ -94,4 +94,4 @@ def add_post():
     return render_template('add_post.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="192.168.8.113", port=5000, debug=True)
