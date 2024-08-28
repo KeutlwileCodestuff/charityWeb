@@ -64,8 +64,15 @@
                                                             <li class="single-list"><a href="forgot-pass.html" class="single">Forgot Password</a></li>
                                                             <li class="single-list"><a href="verification.html" class="single">Verification</a></li>
                                                             <li class="single-list"><a href="new-password.html" class="single">New Password</a></li>
-                                                        </ul>
+                                                        </ul>  
+
                                                     </li>
+                                                    <!-- Add the Sign Up button here -->
+                                                <li class="single-list"><a href="register.html" class="single">Sign Up</a></li>
+                                                <li class="single-list"><a href="faq.html" class="single">FAQs</a></li>
+                                                <li class="single-list"><a href="privacy-policy.html" class="single">privacy policy</a></li>
+                                                <li class="single-list"><a href="terms-condition.html" class="single">terms-condition</a></li>
+                                            </ul>
 
                                                     <li class="single-list"><a href="faq.html" class="single">FAQs</a></li>
                                                     <li class="single-list"><a href="privacy-policy.html" class="single">privacy policy</a></li>
@@ -81,7 +88,9 @@
                                     <div class="cart">
                                         <!-- search button -->
                                         <a href="javascript:void(0)" class="rounded-btn search-bar"><i class="ri-search-line"></i></a>
-                                        <a href="login.html" class="btn-primary-fill pill-btn">Log in</a>
+                                        <a href="'login.html" class="btn-primary-fill pill-btn">Log in</a>
+                                        <!-- Sign Up Button -->
+                                        <a href="register.html" class="btn-primary-fill pill-btn" style="margin-left: 10px;">Sign Up</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +122,7 @@
                                 <h1 class="title font-700 wow fadeInUp" data-wow-delay="0.1s">Donate to children & senior citizens</h1>
                                 <p class="pera wow fadeInUp" data-wow-delay="0.3s">"Empowerment begins with transparency. We create a more direct and transparent channel for donors to connect with those in need."</p>
                                 <div class="d-flex gap-20 flex-wrap">
-                                    <a href="donation.html" class="btn-primary-fill hero-btn wow fadeInLeft" data-wow-delay="0.4s">Donate Now</a>
+                                    <a href="{{ url_for('make_donation') }}" class="btn-primary-fill hero-btn wow fadeInLeft" data-wow-delay="0.4s">Donate Now</a>
                                     <a href="{{ url_for('explore_charities') }}" class="btn-tertiary-fill hero-btn wow fadeInRight" data-wow-delay="0.4s">Explore Charities</a>
                                 </div>
                             </div>
@@ -567,6 +576,8 @@
                             <ul class="imp-link">
                                 <li class="single-list">
                                     <a class="single" href="javascript:void(0)">About Company</a>
+                                    <li class="single-list">
+                                        <a class="single" href="javascript:void(0)">Apply to receive donation</a>    
                                 </li>
                                 <li class="single-list">
                                     <a class="single" href="javascript:void(0)">Latest Projects</a>
