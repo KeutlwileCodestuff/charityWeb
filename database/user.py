@@ -6,7 +6,7 @@ class UserStorage:
 		cursor = self.conn.cursor()
 		# Create table
 		cursor.execute('''CREATE TABLE IF NOT EXISTS Users
-             (email text, name text)''')
+             (uid integer primary key authincrement, email text, name text)''')
 		cursor.close()
 
 		self.conn.commit()
@@ -48,7 +48,7 @@ class UserStorage:
 	def	get_user(self, email):
 		try:
 			cursor  = self.conn.cursor()
-			result = cursor.execute("SELECT email, name, password FROM Users WHERE email = {}".format(email))
+			result = cursor.execute("SELECT uid email, name, password FROM Users WHERE email = {}".format(email))
 			if result.arraysize == 0:
 				return None
 			

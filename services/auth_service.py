@@ -1,6 +1,7 @@
 from models.user import User
 from database.user import UserStorage
 from exceptions.auth_exceptions import InvalidPassword
+from tokens.jwt import generateJWT
 
 class AuthServices:
 	def __init__(self):
@@ -18,13 +19,16 @@ class AuthServices:
 	def get_user(self, email: str, password: str) -> User:
 		
 		# TODO get user
-		found_email, name, found_password = self.user_storage.get_user(email = email)
+		uid, found_email, name, found_password = self.user_storage.get_user(email = email)
+
+		# validate user
 		if not found_email == password:
 			raise InvalidPassword("wrong email or password")
 		
-		# TODO: validate user
 
 		# TODO: generate jwt
+		jwtToken = generateJWT(uid=uid, email=email)
 
+		
 		# TODO: return user
 		return User(email=email, name=name)
