@@ -1,217 +1,121 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <title>Donatee Profile</title>
-    <!-- Bootstrap -->
+    <!-- Given style references -->
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-5.3.0.min.css">
-    <!-- fonts & icon -->
     <link rel="stylesheet" type="text/css" href="/static/remixicon.css">
-    <!-- Plugin -->
     <link rel="stylesheet" type="text/css" href="/static/plugin.css">
-    <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="/static/main-style.css">
     <style>
-        /* Custom Styles */
-        .profile-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-picture {
-            position: relative;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-picture img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        .profile-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .profile-media {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            justify-content: center;
-        }
-
-        .profile-media a {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .profile-catalog {
-            max-width: 200px;
-            margin-top: 20px;
-        }
-
-        .profile-donators {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .donator-card {
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            width: 100px;
-        }
-
-        .donator-card img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
-        }
-
-        .achievements {
-            margin-top: 40px;
-        }
-
-        .achievements .achievement-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .achievement-card {
-            border: 1px solid #ddd;
-            padding: 10px;
-            width: 48%;
-            text-align: center;
-        }
-
-        .achievement-card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .achievement-card .views {
-            margin-top: 10px;
-            color: #555;
+        body {
+            background-color: peachpuff; /* Setting background color to peach as specified */
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="menu-wrapper d-flex align-items-center justify-content-between">
-                                <div class="header-left">
-                                    <a href="index.html">
-                                        <img src="/static/images/logo/image6.png" alt="logo" style="width: 100px; height: auto;">
-                                    </a>
-                                </div>
-                                <div class="header-right">
-                                    <nav class="nav">
-                                        <a href="#" class="nav-link">Home</a>
-                                        <a href="#" class="nav-link">Search</a>
-                                        <a href="#" class="nav-link">Notifications</a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+    <div class="container">
+        <!-- Top section with search and dropdowns -->
+        <div class="row align-items-center py-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="col-md-6 text-end">
+                <div class="dropdown d-inline">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dashboardDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dashboard
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dashboardDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <button class="btn" type="button">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Profile Section -->
+        <div class="row align-items-center py-3">
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="/static/images/profile/default-profile.png" alt="Profile Image" class="rounded-circle" style="width: 100px; height: 100px;">
+                <div class="ms-3">
+                    <h4>John Doe <small class="text-muted">Donatee</small></h4>
+                    <div>
+                        <i class="ri-instagram-line"></i>
+                        <i class="ri-facebook-box-line"></i>
+                        <i class="ri-twitter-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Video about organization -->
+                <div style="width: 100%; padding-top: 56.25%; position: relative;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Donors Display -->
+        <h5>People who have donated to you</h5>
+        <div class="d-flex justify-content-start">
+            <!-- Repeat this block for each donor -->
+            <div class="p-2">
+                <img src="/static/images/profile/donor1.png" alt="Donor Profile" class="rounded-circle" style="width: 60px; height: 60px;">
+                <p>Donor Name</p>
+            </div>
+            <div class="p-2">
+                <img src="/static/images/profile/donor2.png" alt="Donor Profile" class="rounded-circle" style="width: 60px; height: 60px;">
+                <p>Donor Name</p>
+            </div>
+            <div class="p-2">
+                <img src="/static/images/profile/donor3.png" alt="Donor Profile" class="rounded-circle" style="width: 60px; height: 60px;">
+                <p>Donor Name</p>
+            </div>
+        </div>
+        <p><a href="#">See all</a></p>
+
+        <hr>
+
+        <!-- Post Achievements Section -->
+        <h5>Post your achievement</h5>
+        <div class="row">
+            <!-- Repeat this block for each post -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <video width="100%" controls>
+                        <source src="movie.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <p>Video description and views</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <video width="100%" controls>
+                        <source src="movie.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <p>Video description and views</p>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="profile-header">
-            <div class="profile-catalog">
-                <img src="/static/images/user-catalog.jpg" alt="User Catalog" class="img-fluid">
-            </div>
-            <div class="profile-picture">
-                <img src="/static/images/profile-pic.jpg" alt="Profile Picture">
-                <div class="profile-name">Donatee Name</div>
-                <div class="profile-media">
-                    <a href="#"><i class="ri-instagram-line"></i></a>
-                    <a href="#"><i class="ri-facebook-line"></i></a>
-                    <a href="#"><i class="ri-twitter-line"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="profile-donators">
-            <div class="donator-card">
-                <img src="/static/images/donator1.jpg" alt="Donator 1">
-                <div>Donator Name</div>
-            </div>
-            <div class="donator-card">
-                <img src="/static/images/donator2.jpg" alt="Donator 2">
-                <div>Donator Name</div>
-            </div>
-            <!-- Add more donator cards as needed -->
-        </div>
-
-        <div class="achievements">
-            <h2>Your Achievements</h2>
-            <div class="achievement-row">
-                <div class="achievement-card">
-                    <img src="/static/images/achievement1.jpg" alt="Achievement 1">
-                    <div class="views">Views: 1234</div>
-                </div>
-                <div class="achievement-card">
-                    <img src="/static/images/achievement2.jpg" alt="Achievement 2">
-                    <div class="views">Views: 5678</div>
-                </div>
-            </div>
-            <div class="achievement-row">
-                <div class="achievement-card">
-                    <img src="/static/images/achievement3.jpg" alt="Achievement 3">
-                    <div class="views">Views: 9101</div>
-                </div>
-                <div class="achievement-card">
-                    <img src="/static/images/achievement4.jpg" alt="Achievement 4">
-                    <div class="views">Views: 1121</div>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="#">See All Achievements</a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-wrapper footer-bg-one">
-            <div class="container">
-                <!-- Content of footer remains unchanged -->
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll Up  -->
-    <div class="progressParent" id="back-top">
-        <svg class="backCircle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-        </svg>
     </div>
-    <!-- Add an overlay element -->
-    <div class="overlay"></div>
-    <!-- jquery-->
-    <script src="/static/js/jquery-3.7.0.min.js"></script>
-    <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap-5.3.0.min.js"></script>
-    <!-- Plugin -->
-    <script src="/static/js/plugin.js"></script>
-    <!-- Main js-->
-    <script src="/static/js/main.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/static/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

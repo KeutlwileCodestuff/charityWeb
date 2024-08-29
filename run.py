@@ -36,6 +36,10 @@ def explore_charities():
 def login():
     return render_template('login.html')
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
 @app.route('/apply')
 def apply():
     return render_template('apply.html')
