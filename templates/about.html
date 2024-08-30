@@ -47,15 +47,10 @@
                                         <ul class="listing" id="navigation">
                                             <li class="single-list">
                                                 <a href="javascript:void(0)" class="single">Home <i class="ri-arrow-down-s-line"></i></a>
-                                                <ul class="submenu">
-                                                    <li class="single-list"><a href="index.html" class="single">Home 01</a></li>
-                                                    <li class="single-list"><a href="index-two.html" class="single">Home 02</a></li>
-                                                    <li class="single-list"><a href="index-three.html" class="single">Home 03</a></li>
-                                                </ul>
                                             </li>
-                                            <li class="single-list"><a href="about.html" class="single active">About</a></li>
+                                            <li class="single-list"><a href="{{ url_for('about') }}" class="single active">About</a></li>
                                             <li class="single-list"><a href="donation.html" class="single">Donation</a></li>
-                                            <li class="single-list"><a href="blog.html" class="single">Blog</a></li>
+                                            <li class="single-list"><a href="{{ url_for('feed') }}" class="single">Blog</a></li>
                                             <li class="single-list">
                                                 <a href="javascript:void(0)" class="single">Pages <i class="ri-arrow-down-s-line"></i></a>
                                                 <ul class="submenu">
